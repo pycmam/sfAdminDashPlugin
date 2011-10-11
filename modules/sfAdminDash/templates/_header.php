@@ -39,7 +39,7 @@ if ($sf_user->isAuthenticated() && $sf_context->getActionName() != 'secure'): ?>
         <?php echo link_to(sfAdminDash::getProperty('site'), sfAdminDash::getProperty('dashboard_url')) ?>
       </strong>
       <?php if ($sf_context->getModuleName() != 'sfAdminDash' && $sf_context->getActionName() != 'dashboard'): ?>
-        / <?php echo null !== $module_link ? link_to($module_link_name, $module_link) : $module_link_name; ?>
+        / <?php echo null !== $module_link ? link_to(__($module_link_name), $module_link) : __($module_link_name); ?>
         <?php if (null != $action_link): ?>
           / <?php echo link_to(__(ucfirst($action_link_name)), $action_link); ?>
         <?php endif ?>
